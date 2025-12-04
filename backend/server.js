@@ -4,7 +4,6 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, '../frontend')));
 app.use(express.json());
 
 // Load stretches
@@ -33,4 +32,4 @@ app.get('/api/stretches/search', (req, res) => {
     res.json(filtered);
 });
 
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
